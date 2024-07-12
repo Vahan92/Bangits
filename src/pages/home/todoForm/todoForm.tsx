@@ -30,8 +30,13 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 const schema = yup.object().shape({
-  title: yup.string().trim().required('Title is required').min(1, 'Title cannot be empty'),
-  description: yup.string().trim(),
+  title: yup
+    .string()
+    .trim()
+    .required('Title is required')
+    .min(1, 'Title cannot be empty')
+    .max(70, 'No more than 70 characters'),
+  description: yup.string().trim().max(250, 'No more than 250 characters'),
   deadline: yup.date().nullable().min(today, 'Deadline cannot be in the past')
 });
 
