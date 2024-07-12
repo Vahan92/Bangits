@@ -59,24 +59,22 @@ const TodoForm: React.FC<TodoFormProps> = ({
   });
 
   const onSubmit: SubmitHandler<TodoFormInput> = (data) => {
+    const commonData = {
+      title: data.title,
+      description: data.description,
+      deadline: data.deadline ? new Date(data.deadline).toISOString() : undefined
+    };
+
     if (editMode && id !== undefined) {
       dispatch(
         editTodo({
           id,
-          title: data.title,
-          description: data.description,
-          deadline: data.deadline ? new Date(data.deadline).toISOString() : undefined
+          ...commonData
         })
       );
       onCancel && onCancel();
     } else {
-      dispatch(
-        addTodo({
-          title: data.title,
-          description: data.description,
-          deadline: data.deadline ? new Date(data.deadline).toISOString() : undefined
-        })
-      );
+      dispatch(addTodo(commonData));
     }
     methods.reset();
   };
