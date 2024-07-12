@@ -2,8 +2,9 @@ import React from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3';
-import { InputProps } from '../../../types/common';
 import { Typography } from '@mui/material';
+
+import { InputProps } from '../../../types/common';
 
 const FormDatePicker: React.FC<InputProps> = ({ name, defaultValue, label }) => {
   const {

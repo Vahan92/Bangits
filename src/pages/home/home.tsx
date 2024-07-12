@@ -1,8 +1,9 @@
 import { Container } from '@mui/material';
+import { useState } from 'react';
+
 import TodoForm from './todoForm/todoForm';
 import TodoList from './todoList/todoList';
 import TodoStats from './todoStats/todoStats';
-import { useState } from 'react';
 import DeletedTodos from './deletedTodos/deletedTodos';
 
 const Todo: React.FC = () => {
@@ -11,9 +12,7 @@ const Todo: React.FC = () => {
     <Container
       sx={{
         width: '100%',
-        '@media (min-width: 1200px)': {
-          maxWidth: '800px'
-        },
+        maxWidth: '800px !important',
         '& > *': {
           width: '100%'
         }

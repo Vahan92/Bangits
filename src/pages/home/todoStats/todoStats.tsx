@@ -1,10 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Box, Link } from '@mui/material';
+
 import { RootState } from '../../../store';
 
 interface TodoStatsProps {
-  setShowDeleted: (showDeleted: boolean) => void;
+  setShowDeleted: (_showDeleted: boolean) => void;
   showDeleted: boolean;
 }
 

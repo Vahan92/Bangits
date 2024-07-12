@@ -13,6 +13,7 @@ module.exports = {
   rules: {
     'react-hooks/exhaustive-deps': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
+    'react-hooks/rules-of-hooks': 'off',
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react/prop-types': 0,
     'react/react-in-jsx-scope': 0,

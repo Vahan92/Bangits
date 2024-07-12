@@ -9,6 +9,7 @@ import {
   Box,
 } from '@mui/material';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+
 import { RootState } from '../../../store';
 
 const DeletedTodos: React.FC = () => {

@@ -1,4 +1,4 @@
-import Todo from './pages/home';
+import Todo from './pages/home/home';
 import './App.css';
 
 function App() {

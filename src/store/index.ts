@@ -1,5 +1,6 @@
 // src/store.ts
 import { configureStore } from '@reduxjs/toolkit';
+
 import todoReducer, { TodoState } from './todoSlice';
 
 const store = configureStore({
